@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Vídeos grátis</h1>
+    <p>Assiste uns vídeos aí</p>
+    <div style="aspect-ratio:2/1;width:30%;border-style:dotted;max-width:400px"> 
+    
+      <% for(var i=0; i<videos.length; i++) {%>
+          <div style="border-style:solid;width:95%;height:auto;display:flex;justify-content:space-between;"> 
+
+            <%- include('./partials/videocard', videos[i]) %>
+
+          </div>
+        <% } %>
+    
+    </div>
+  </body>
+</html>
